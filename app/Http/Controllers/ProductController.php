@@ -57,4 +57,16 @@ class ProductController extends Controller
 
         return redirect()->route('product.listproduct')->with('success', 'Product deleted successfully!');
       }
+
+      public function home()
+    {
+        $products = Product::latest()->get();
+        return view('frontend.index', compact('products'));
+    }
+
+    public function show(Product $product)
+    {
+        return view('frontend.product', compact('product'));
+    }
+
 }

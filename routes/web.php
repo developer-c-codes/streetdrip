@@ -34,4 +34,11 @@ Route::delete('/products/{product}', [ProductController::class, 'destroy'])->nam
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });
+
+Route::get('/frontend/index', [ProductController::class, 'home'])->name('home');
+
+Route::get('/product/{product}', 
+    [ProductController::class, 'show']
+)->name('product.show');
+
 require __DIR__.'/auth.php';

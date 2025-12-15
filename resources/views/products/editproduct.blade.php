@@ -8,7 +8,7 @@
             <li class="text-white p-4  border-gray-700 hover:bg-gray-700 rounded"><a href="{{ route('dashboard') }}">Home</a></li>
             <li class="text-white p-4  border-gray-700  hover:bg-gray-700 rounded"><a href="#">All Product</a></li>
             <li class="text-white p-4  border-gray-700  hover:bg-gray-700 rounded"><a href="{{ route('product.index') }}">Add Product</a></li>
-            <li class="text-white p-4  border-gray-700  hover:bg-gray-700 rounded"><a href="#">Orders</a></li>
+            <li class="text-white p-4  border-gray-700  hover:bg-gray-700 rounded"><a href="{{ route('home') }}">Frontend</a></li>
             <li class="text-white p-4  border-gray-700  hover:bg-gray-700 rounded"><a href="#">Payment</a></li>
             <li class="text-white p-4  border-gray-700  hover:bg-gray-700 rounded"><a href="#">Statistics</a></li>
             <li class="text-white p-4  border-gray-700  hover:bg-gray-700 rounded"><a href="#">Settings</a></li>
