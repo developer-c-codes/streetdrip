@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\DashboardController;
 
 use Illuminate\Support\Facades\Route;
@@ -40,5 +41,15 @@ Route::get('/frontend/index', [ProductController::class, 'home'])->name('home');
 Route::get('/product/{product}', 
     [ProductController::class, 'show']
 )->name('product.show');
+
+Route::get('/fronted/index', [ProductController::class, 'home'])->name('home'); 
+Route::get('/fronted/cart', [CartController::class, 'index'])->name('frontend.cart'); // view cart blade
+Route::post('/fronted/cart/add/{id}', [CartController::class, 'add'])->name('cart.add'); // add product to cart by id
+Route::post('/frontend/cart/update', [CartController::class, 'update'])->name('cart.update');
+Route::post('/frontend/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
+Route::get('/clear-cart', function () {
+    session()->forget('cart');
+    return 'Cart cleared successfully';
+});
 
 require __DIR__.'/auth.php';
