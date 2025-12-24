@@ -37,7 +37,9 @@
                 <label class="text-white">Color</label><br>
                 <input type="text" name="color" class="w-full rounded bg-gray-800  text-white"   placeholder="Product Color"><br><br>  
               
-              
+                <label class="text-white">Image</label><br>
+                <input type="file" name="image" class="w-full rounded bg-gray-800  text-white"   placeholder="Product Color"><br><br>  
+
                 <button type="submit" class="rounded text-white bg-blue-500 p-2">Save Product</button>
                 <br><br>
                 <button type="reset" class="rounded text-white bg-red-500 p-2 justify-end flex ">Cancel</button>

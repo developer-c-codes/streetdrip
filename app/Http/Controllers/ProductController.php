@@ -19,7 +19,14 @@ class ProductController extends Controller
             'stock' => 'required|integer',
             'size' => 'required|string|max:50',
             'color' => 'required|string|max:50',
+            'image' => 'required|image|mimes:jpg,png,jpeg|max:2048',
         ]);
+
+        $imagePath = null;
+
+        if($request->hasFile('image')) {
+          $imagePath = $request->file('image')->store('products', 'public');
+        }
 
         Product::create($validated);  
 
